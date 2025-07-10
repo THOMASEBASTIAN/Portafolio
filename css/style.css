@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Minecraft';
+  src: url('../fuentes/Minecraft.ttf') format('truetype');
+}
+
+    @keyframes arcoiris {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2d3e50); /* Azul oscuro con gris azulado */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Minecraft', sans-serif;
+}
+.box{
+    width: 100%;
+      height: 60px;
+      background: rgba(200, 200, 200, 0.3); /* gris semi-transparente */
+      backdrop-filter: blur(8px); /* efecto vidrio */
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.4);
+}
+.carpeta{
+  width: 50px;
+  position: absolute;
+  left: 40px;    
+  top: 150px; 
+}
+.Experencia{
+  position: absolute;
+  top: 180px;
+  left: 20px;
+   font-size: 15px;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: arcoiris 5s linear infinite;
+}
+.hoja{
+  width: 50px;
+  position: absolute;
+  left: 40px;    
+  top: 250px; 
+}
+.windo{
+  width: 45px;
+  position: absolute;
+  left: 40px;    
+  top: 10px; 
+}
+.Certificados{
+  position: absolute;
+  top: 290px;
+  left: 20px;
+   font-size: 15px;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: arcoiris 5s linear infinite;
+}
+.mio{
+   width: 70px;
+  position: absolute;
+  left: 24px;    
+  top: 340px; 
+}
+.MIE{
+   position: absolute;
+  top: 390px;
+  left: 25px;
+   font-size: 15px;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: arcoiris 5s linear infinite;
+}
+.emocional{
+   width: 70px;
+  position: absolute;
+  left: 15px;    
+  top: 450px; 
+}
+.emocionales{
+  
+   position: absolute;
+  top: 510px;
+  left: 40px;
+   font-size: 15px;
+      background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: arcoiris 5s linear infinite;
+
+}
+.video{
+    width: 65px;
+  position: absolute;
+  left: 295px;    
+  top: 4px;
+}
+.logo{
+  width: 55px;
+  position: absolute;
+  left: 135px;    
+  top: 4px;
+}
+.github{
+    width: 55px;
+  position: absolute;
+  left: 855px;    
+  top: 4px;
+}
+.instagram{
+    width: 55px;
+  position: absolute;
+  left: 655px;    
+  top: 4px;
+}
+.linkedin{
+   width: 55px;
+  position: absolute;
+  left: 465px;    
+  top: 4px;
+}
