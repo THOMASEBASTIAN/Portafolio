@@ -138,3 +138,183 @@ body {
   left: 465px;    
   top: 4px;
 }
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1e1e2f;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  width: 400px;
+  position: relative;
+  color: white;
+  font-family: 'Minecraft', sans-serif;
+}
+.avatar-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.mensaje {
+  font-size: 16px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #1e1e2f;
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-content video {
+  border-radius: 12px;
+  width: 100%;
+}
+.sobre-mi-content {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.contenido-scroll {
+  padding-right: 10px;
+}
+
+.introduccion, .descripcion {
+  font-size: 16px;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+/* Efecto hover para todos los íconos de escritorio */
+.carpeta,
+.hoja,
+.mio,
+.emocional,
+.video,
+.logo,
+.github,
+.instagram,
+.linkedin,
+.windo {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.carpeta:hover,
+.hoja:hover,
+.mio:hover,
+.emocional:hover,
+.video:hover,
+.logo:hover,
+.github:hover,
+.instagram:hover,
+.linkedin:hover,
+.windo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2) drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+.imagenes-sobre-mi {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sobre-mi-img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.sobre-mi-img:hover {
+  transform: scale(1.05);
+}
+.titulo-sobre-mi {
+  text-align: center;
+  font-size: 24px;
+  color: #00ffcc;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.imagenes-sobre-mi {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.imagen-con-texto {
+  text-align: center;
+}
+
+.sobre-mi-img {
+  width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.sobre-mi-img:hover {
+  transform: scale(1.06);
+}
+
+.texto-img {
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+}
+
