@@ -1,41 +1,134 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('introModal');
-  const closeBtn = document.getElementById('closeModal');
+document.addEventListener('DOMContentLoaded', () => {
 
-  // Mostrar modal al cargar
-  modal.style.display = 'flex';
+    // --- LÓGICA PARA LA TRANSICIÓN DEL AVATAR DE HABBO ---
+    const habboAvatar = document.getElementById('habboAvatar');
+    const habboImages = ['./imagenes/habbo.png', './imagenes/habbolado.png', './imagenes/habbolado2.png'];
+    let currentImageIndex = 0;
+    let avatarInterval;
 
-  // Cerrar el modal
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+    const startAvatarTransition = () => {
+        clearInterval(avatarInterval);
+        avatarInterval = setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % habboImages.length;
+            if (habboAvatar) {
+                habboAvatar.src = habboImages[currentImageIndex];
+            }
+        }, 2000);
+    };
 
-  // Más adelante puedes poner aquí funciones para abrir otras ventanas
-});
-// Video modal
-const videoModal = document.getElementById('videoModal');
-const closeVideo = document.getElementById('closeVideo');
-const videoIcon = document.querySelector('.video');
-const miVideo = document.getElementById('miVideo');
+    const stopAvatarTransition = () => {
+        clearInterval(avatarInterval);
+    };
 
-videoIcon.addEventListener('click', () => {
-  videoModal.style.display = 'flex';
-  miVideo.currentTime = 0;
-  miVideo.play();
-});
+    // --- Lógica para abrir y cerrar ventanas ---
+    const setupWindow = (iconId, windowId) => {
+        const icon = document.getElementById(iconId);
+        const windowElement = document.getElementById(windowId);
+        if (icon && windowElement) {
+            const closeBtn = windowElement.querySelector('.close-btn');
+            icon.addEventListener('click', () => {
+                windowElement.style.display = 'block';
+                if (windowId === 'sobreMiModal') {
+                    startAvatarTransition();
+                }
+            });
+            if (closeBtn) {
+                closeBtn.addEventListener('click', () => {
+                    windowElement.style.display = 'none';
+                    if (windowId === 'sobreMiModal') {
+                        stopAvatarTransition();
+                    }
+                });
+            }
+        }
+    };
+    
+    // AQUÍ SE ACTIVAN TODAS LAS VENTANAS DE ICONOS DEL ESCRITORIO
+    setupWindow('sobreMiIcon', 'sobreMiModal');
+    setupWindow('videoIcon', 'videoModal');
+    setupWindow('skillsIcon', 'skillsModal');
+    setupWindow('experienciaIcon', 'experienciaModal'); // Asumiendo que tendrás estas ventanas
+    setupWindow('certificadosIcon', 'certificadosModal'); // Asumiendo que tendrás estas ventanas
 
-closeVideo.addEventListener('click', () => {
-  videoModal.style.display = 'none';
-  miVideo.pause();
-});
-const sobreMiModal = document.getElementById('sobreMiModal');
-const closeSobreMi = document.getElementById('closeSobreMi');
-const sobreMiIcon = document.querySelector('.mio');
+    // --- Lógica para hacer las ventanas arrastrables ---
+    const makeWindowsDraggable = () => {
+        const windows = document.querySelectorAll('.window');
+        windows.forEach(window => {
+            const titleBar = window.querySelector('.title-bar');
+            let isDragging = false;
+            let offsetX, offsetY;
+            titleBar.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                offsetX = e.clientX - window.offsetLeft;
+                offsetY = e.clientY - window.offsetTop;
+                windows.forEach(w => w.style.zIndex = '10');
+                window.style.zIndex = '11';
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    window.style.left = `${e.clientX - offsetX}px`;
+                    window.style.top = `${e.clientY - offsetY}px`;
+                }
+            });
+            document.addEventListener('mouseup', () => { isDragging = false; });
+        });
+    };
+    makeWindowsDraggable();
 
-sobreMiIcon.addEventListener('click', () => {
-  sobreMiModal.style.display = 'flex';
-});
+    // --- Lógica para el reloj de la barra de tareas ---
+    const updateClock = () => {
+        const clockElement = document.getElementById('clock');
+        const now = new Date();
+        const timeString = now.toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' });
+        clockElement.textContent = timeString;
+    };
+    setInterval(updateClock, 1000);
+    updateClock();
 
-closeSobreMi.addEventListener('click', () => {
-  sobreMiModal.style.display = 'none';
+    // --- LÓGICA PARA EL MENÚ DE INICIO ---
+    const startButton = document.querySelector('.start-button');
+    const startMenu = document.getElementById('start-menu');
+    
+    if (startButton && startMenu) {
+        startButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            startMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
+                startMenu.classList.remove('active');
+            }
+        });
+    }
+
+    // --- LÓGICA PARA EL MODO DÍA/NOCHE ---
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('night-mode');
+        });
+    }
+
+    // --- LÓGICA PARA LA VENTANA DE CONTACTO ---
+    const contactoLink = document.getElementById('contacto-link');
+    const contactoModal = document.getElementById('contactoModal');
+    
+    if (contactoLink && contactoModal) {
+        contactoLink.addEventListener('click', (event) => {
+            event.preventDefault(); 
+            contactoModal.style.display = 'block';
+            if (startMenu) {
+                startMenu.classList.remove('active');
+            }
+        });
+
+        const contactoCloseBtn = contactoModal.querySelector('.close-btn');
+        if (contactoCloseBtn) {
+            contactoCloseBtn.addEventListener('click', () => {
+                contactoModal.style.display = 'none';
+            });
+        }
+    }
+
 });

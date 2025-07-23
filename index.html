@@ -1,83 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thomas</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Bastos - Portafolio</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="box"></div>
 
-  <img src="./Imagenes/carpeta-abierta.png" alt="carpeta" class="carpeta">
-  <p class="Experencia">Experiencia</p>
-
-  <img src="./Imagenes/escritura.png" alt="hoja" class="hoja">
-  <p class="Certificados">Certificados</p>
-
-  <img src="./Imagenes/ventanas.png" alt="ventana" class="windo">
-  <img src="./Imagenes/interfaz-de-usuario.png" alt="usuario" class="mio">
-  <p class="MIE">Sobre mí</p>
-
-  <img src="./Imagenes/inteligencia-emocional.png" alt="emocional" class="emocional">
-  <p class="emocionales">Skills</p>
-
-  <img src="./Imagenes/icons8-cámara-48.png" alt="video" class="video">
-  <img src="./Imagenes/icons8-logo-de-google-48.png" alt="google" class="logo">
-  <img src="./Imagenes/github.png" alt="github" class="github">
-  <img src="./Imagenes/instagram.png" alt="instagram" class="instagram">
-  <img src="./Imagenes/linkedin.png" alt="linkedin" class="linkedin">
-  <div id="introModal" class="modal">
-  <div class="modal-content">
-    <span class="close" id="closeModal">&times;</span>
-    <img src="./Imagenes/Yo.jpeg" alt="Foto de Thomas" class="avatar-img">
-    <p class="mensaje">¡Hola! Soy Thomas, bienvenido a mi portafolio. Haz clic en los íconos para conocer más sobre mí.</p>
-  </div>
-</div>
-<!-- Modal de video -->
-<div id="videoModal" class="modal">
-  <div class="modal-content">
-    <span class="close" id="closeVideo">&times;</span>
-    <video id="miVideo" width="100%" controls>
-      <source src="./videos/Sobremi.mp4" type="video/mp4">
-    </video>
-  </div>
-</div>
-<!-- Modal de Sobre Mí -->
-<!-- Modal de Sobre Mí -->
-<div id="sobreMiModal" class="modal">
-  <div class="modal-content sobre-mi-content">
-    <span class="close" id="closeSobreMi">&times;</span>
-    <div class="contenido-scroll">
-      <h2 class="titulo-sobre-mi">Conoce más sobre mí</h2>
-
-      <p class="introduccion">
-         Mucho gusto, en este apartado van a conocer sobre mí, a qué me dedico, qué hago en mis tiempos libres y más.
-      </p>
-
-      <p class="descripcion">
-        Me llamo <strong>Thomas Sebastián Bastos García</strong>, tengo 18 años y me dedico al desarrollo de software. Tengo un técnico en software y mi sueño es aprender inglés y ejercer la carrera profesional de software mientras trabajo para una empresa reconocida en el sector.
-      </p>
-
-      <p class="descripcion">
-        Soy un desarrollador de software con experiencia en HTML, JavaScript y Python. He trabajado en el desarrollo de proyectos web y aplicaciones funcionales, creando interfaces responsivas e interactivas centradas en la experiencia del usuario. Con Python, he implementado soluciones de automatización y lógica de sistemas. Me considero una persona autodidacta, responsable y con un fuerte interés en el aprendizaje continuo. Además, tengo una excelente capacidad de adaptación al trabajo en equipo y a entornos dinámicos. Actualmente, busco oportunidades para crecer profesionalmente y aplicar mis conocimientos en nuevos desafíos.
-      </p>
-
-      <div class="imagenes-sobre-mi">
-        <div class="imagen-con-texto">
-          <img src="./Imagenes/yooo.jpeg" alt="Foto de Thomas" class="sobre-mi-img">
-          <p class="texto-img">Este soy yo :)</p>
+    <div class="desktop">
+        <div class="icon" id="sobreMiIcon">
+            <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-4.png" alt="Sobre Mí">
+            <span>Sobre Mí</span>
         </div>
-        <div class="imagen-con-texto">
-          <img src="./Imagenes/codigo.jpeg" alt="Código trabajando" class="sobre-mi-img">
-          <p class="texto-img">Este es mi mundo: el código</p>
+        <div class="icon" id="experienciaIcon">
+             <img src="https://win98icons.alexmeub.com/icons/png/directory_closed-4.png" alt="Experiencia">
+            <span>Experiencia</span>
         </div>
-      </div>
+        <div class="icon" id="certificadosIcon">
+             <img src="https://win98icons.alexmeub.com/icons/png/template_empty-1.png" alt="Certificados">
+            <span>Certificados</span>
+        </div>
+        <div class="icon" id="skillsIcon">
+             <img src="./imagenes/inteligencia-emocional.png" alt="Skills">
+            <span>Skills</span>
+        </div>
+         <div class="icon" id="videoIcon">
+             <img src="https://win98icons.alexmeub.com/icons/png/camera-2.png" alt="Video">
+            <span>Presentación</span>
+        </div>
     </div>
-  </div>
-</div>
 
+    <div id="sobreMiModal" class="window">
+         <div class="title-bar">
+             <div class="title-bar-text">Sobre Mí</div>
+             <div class="title-bar-controls">
+                 <button aria-label="Close" class="close-btn"></button>
+             </div>
+         </div>
+         <div class="window-body sobre-mi-body">
+             <div class="contenido-texto">
+                 <h2 class="window-title">¡Hola! Soy Thomas Bastos</h2>
+                 <p>Soy un desarrollador de software apasionado por la tecnología y la resolución creativa de problemas.</p>
+                 <p>Mi foco principal es el desarrollo web, utilizando tecnologías como HTML, CSS y JavaScript para crear interfaces dinámicas y funcionales. Para asegurar un código limpio y un trabajo colaborativo eficiente, utilizo el control de versiones con GitHub. Actualmente, estoy expandiendo mis habilidades y aprendiendo sobre bases de datos para construir aplicaciones aún más robustas y completas.</p>
+                 <p>Me considero una persona con habilidades blandas muy sólidas. Disfruto enfrentando desafíos y siempre busco la solución más eficiente para cualquier problema. Mi curiosidad no se detiene en el código; también soy un gran aficionado a los videojuegos y a la música, pasiones que inspiran mi creatividad.</p>
+             </div>
+             <div class="avatar-container">
+                 <img id="habboAvatar" src="./imagenes/habbo.png" alt="Avatar de Thomas" class="avatar-sobre-mi">
+                 <div class="habbo-bubble">¡Hola!</div>
+             </div>
+         </div>
+     </div>
+     
+     <div id="videoModal" class="window">
+          <div class="title-bar">
+             <div class="title-bar-text">Video de Presentación</div>
+             <div class="title-bar-controls">
+                 <button aria-label="Close" class="close-btn"></button>
+             </div>
+         </div>
+         <div class="window-body">
+              <video id="miVideo" width="100%" controls>
+                 <source src="./videos/Sobremi.mp4" type="video/mp4">
+                 Tu navegador no soporta el video.
+             </video>
+         </div>
+     </div>
+     
+    <div id="skillsModal" class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Habilidades Técnicas</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" class="close-btn"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <div class="skills-grid">
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
+      
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></div>
+                <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactoModal" class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Información de Contacto</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" class="close-btn"></button>
+            </div>
+        </div>
+        <div class="window-body contact-body">
+            <div class="contact-item">
+                <img src="https://win98icons.alexmeub.com/icons/png/envelope_closed-1.png" alt="Email">
+                <div class="contact-text">
+                    <span>Email:</span>
+                    <p>thomasbastos.us@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <img src="https://win98icons.alexmeub.com/icons/png/phone_old-1.png" alt="Teléfono">
+                <div class="contact-text">
+                    <span>Teléfono / WhatsApp:</span>
+                    <p>+57 3016681835</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="taskbar">
+        <div class="start-button">
+            <img src="https://win98icons.alexmeub.com/icons/png/windows-0.png" alt="Start Icon" height="22">
+            <span>Inicio</span>
+        </div>
+
+        <div class="taskbar-divider"></div>
+        <div id="theme-toggle-btn" class="taskbar-button" title="Cambiar Tema (Día/Noche)">
+            <img src="https://win98icons.alexmeub.com/icons/png/color_settings-1.png" alt="Cambiar Tema">
+        </div>
+        <div class="taskbar-divider"></div>
+
+        <div class="time" id="clock">12:00 PM</div>
+    </div>
+
+    <div id="start-menu">
+        <div class="start-menu-sidebar"></div>
+        <ul>
+            <li><a href="https://www.instagram.com/sebs_mdx/" target="_blank" rel="noopener noreferrer"><img src="./imagenes/instagram.png"><span>Instagram</span></a></li>
+            <li><a href="https://www.linkedin.com/in/thomas-sebastian-bastos-garcia-906a3630b/" target="_blank" rel="noopener noreferrer"><img src="https://win98icons.alexmeub.com/icons/png/users-1.png"><span>LinkedIn</span></a></li>
+            <li><a href="https://github.com/THOMASEBASTIAN" target="_blank" rel="noopener noreferrer"><img src="./imagenes/github.png"><span>GitHub</span></a></li>
+            <li class="separator"><hr></li>
+            <li><a href="#" id="contacto-link"><img src="https://win98icons.alexmeub.com/icons/png/msagent-1.png"><span>Contacto</span></a></li>
+        </ul>
+    </div>
+
+    <script src="./js/script.js"></script>
 </body>
-<script src="./js/script.js"></script>
-
 </html>
