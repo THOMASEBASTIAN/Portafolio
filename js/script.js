@@ -43,12 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
-    // AQUÍ SE ACTIVAN TODAS LAS VENTANAS DE ICONOS DEL ESCRITORIO
+    // AQUÍ SE ACTIVAN TODAS LAS VENTANAS
     setupWindow('sobreMiIcon', 'sobreMiModal');
     setupWindow('videoIcon', 'videoModal');
     setupWindow('skillsIcon', 'skillsModal');
-    setupWindow('experienciaIcon', 'experienciaModal'); // Asumiendo que tendrás estas ventanas
-    setupWindow('certificadosIcon', 'certificadosModal'); // Asumiendo que tendrás estas ventanas
+    setupWindow('experienciaIcon', 'experienciaModal'); // <--- AÑADIDO
+    setupWindow('kariomedia-folder', 'kariomediaModal'); // <--- AÑADIDO
+    setupWindow('f1-folder', 'f1Modal'); // <--- AÑADIDO
+    // setupWindow('certificadosIcon', 'certificadosModal'); // Puedes activar esta cuando la crees
 
     // --- Lógica para hacer las ventanas arrastrables ---
     const makeWindowsDraggable = () => {

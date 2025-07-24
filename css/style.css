@@ -202,7 +202,7 @@ body.night-mode {
 
 /* ESTILOS "SOBRE MÍ" */
 .sobre-mi-body { display: flex; align-items: flex-start; gap: 25px; padding: 20px; }
-.contenido-texto { order: 1; flex: 1; color: #000000; }
+.contenido-texto { order: 1; flex: 1; color: #ffffff; }
 .contenido-texto .window-title { margin-top: 0; }
 .avatar-container { order: 2; width: 180px; position: relative; flex-shrink: 0; margin-top: 10px; }
 .avatar-sobre-mi { width: 100%; image-rendering: pixelated; }
@@ -225,3 +225,78 @@ body.night-mode {
 .contact-item img { width: 48px; height: 48px; image-rendering: pixelated; }
 .contact-text span { font-weight: bold; font-size: 18px; color: #000080; }
 .contact-text p { margin: 2px 0 0 0; font-size: 20px; }
+/* =========================================== */
+/* ===== ESTILOS PARA CARPETAS DE EXPERIENCIA ===== */
+/* =========================================== */
+#experienciaModal .window-body {
+    background-color: #ffffff; /* Fondo blanco como el explorador */
+    padding: 10px;
+}
+
+.folder-grid {
+    display: flex; /* Usamos flex para alinear las carpetas */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+}
+
+.folder-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    padding: 5px;
+    border: 1px dotted transparent;
+    cursor: pointer;
+}
+
+.folder-item:hover {
+    background-color: #000080;
+    border: 1px dotted #ffffff;
+}
+
+.folder-item img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
+}
+
+.folder-item span {
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    background-color: transparent;
+    padding: 2px 4px;
+}
+
+.folder-item:hover span {
+    background-color: #000080; /* El fondo del texto también cambia */
+    color: #ffffff;
+}
+
+.project-link-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 10px; /* Margen para centrarlo y separarlo */
+    padding: 8px 16px;
+    background-color: #c0c0c0;
+    border: 2px outset #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.project-link-btn:active {
+    border-style: inset;
+}
+
+/* Estilos para la lista de funcionalidades */
+#kariomediaModal ul {
+    margin-top: 5px;
+    padding-left: 25px;
+}
+
+#kariomediaModal li {
+    margin-bottom: 8px;
+}
