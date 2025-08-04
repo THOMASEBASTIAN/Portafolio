@@ -60,10 +60,16 @@
              </div>
          </div>
          <div class="window-body">
-              <video id="miVideo" width="100%" controls>
-                 <source src="./videos/Sobremi.mp4" type="video/mp4">
-                 Tu navegador no soporta el video.
-             </video>
+             <div class="folder-grid">
+    <div class="folder-item">
+        <img src="https://win98icons.alexmeub.com/icons/png/directory_closed-4.png" alt="Carpeta Imágenes">
+        <span>Imágenes</span>
+    </div>
+    <div class="folder-item">
+        <img src="https://win98icons.alexmeub.com/icons/png/directory_closed-4.png" alt="Carpeta Videos">
+        <span>Videos</span>
+    </div>
+</div>
          </div>
      </div>
      
@@ -132,14 +138,13 @@
     <div id="start-menu">
         <div class="start-menu-sidebar"></div>
         <ul>
-            <li><a href="https://www.instagram.com/sebs_mdx/" target="_blank" rel="noopener noreferrer"><img src="./imagenes/instagram.png"><span>Instagram</span></a></li>
             <li><a href="https://www.linkedin.com/in/thomas-sebastian-bastos-garcia-906a3630b/" target="_blank" rel="noopener noreferrer"><img src="https://win98icons.alexmeub.com/icons/png/users-1.png"><span>LinkedIn</span></a></li>
             <li><a href="https://github.com/THOMASEBASTIAN" target="_blank" rel="noopener noreferrer"><img src="./imagenes/github.png"><span>GitHub</span></a></li>
             <li class="separator"><hr></li>
             <li><a href="#" id="contacto-link"><img src="https://win98icons.alexmeub.com/icons/png/msagent-1.png"><span>Contacto</span></a></li>
         </ul>
     </div>
-    <div id="experienciaModal" class="window">
+<div id="experienciaModal" class="window">
         <div class="title-bar">
             <div class="title-bar-text">Experiencia Profesional</div>
             <div class="title-bar-controls">
@@ -147,6 +152,8 @@
             </div>
         </div>
         <div class="window-body">
+
+            <div class="section-header">Proyectos Frontend</div>
             <div class="folder-grid">
                 <div class="folder-item" id="kariomedia-folder">
                     <img src="https://win98icons.alexmeub.com/icons/png/directory_closed-4.png" alt="Carpeta Kariomedia">
@@ -157,6 +164,17 @@
                     <span>Proyecto F1</span>
                 </div>
             </div>
+
+            <hr class="section-divider">
+
+            <div class="section-header">Proyectos Backend</div>
+            <div class="folder-grid">
+                <div class="folder-item" id="sistema-medico-folder">
+                    <img src="https://win98icons.alexmeub.com/icons/png/servers-2.png" alt="Sistema Medico Backend">
+                    <span>Sistema Medico</span>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -222,6 +240,42 @@
             </ul>
 
             <a href="https://github.com/JuanSantoyoJ/Formula_1" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                Ver Proyecto en GitHub
+            </a>
+        </div>
+    </div>
+   <div id="sistemaMedicoModal" class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Backend: Sistema Medico</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" class="close-btn"></button>
+            </div>
+        </div>
+        <div class="window-body">
+            <h2 class="window-title">API RESTful - Sistema de Gestión Médica</h2>
+            <p>
+                Este proyecto consiste en el desarrollo de una <strong>API RESTful robusta y escalable</strong>, diseñada para ser el núcleo de un sistema de gestión de citas médicas. El enfoque es 100% backend, centrado en la lógica de negocio, la seguridad y la gestión de datos.
+            </p>
+            
+            <h4>Funcionalidades Principales de la API:</h4>
+            <ul>
+                <li><strong>Gestión de Pacientes:</strong> Endpoints para operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los registros de pacientes.</li>
+                <li><strong>Gestión de Médicos:</strong> Endpoints para manejar los perfiles y horarios de los médicos disponibles en el sistema.</li>
+                <li><strong>Manejo de Citas:</strong> Lógica para agendar, consultar, reprogramar y cancelar citas médicas, manejando la disponibilidad y cruces de horarios.</li>
+                <li><strong>Autenticación y Seguridad:</strong> Implementación de un sistema de autenticación para proteger las rutas y asegurar que solo usuarios autorizados puedan acceder y modificar la información.</li>
+            </ul>
+
+            <p>
+                <strong>Tecnologías Utilizadas:</strong>
+            </p>
+            <ul>
+                <li><strong>Node.js:</strong> Entorno de ejecución para construir el servidor.</li>
+                <li><strong>Express.js:</strong> Framework para la creación de la API y la gestión de rutas y middleware.</li>
+                <li><strong>MongoDB:</strong> Base de datos NoSQL para almacenar toda la información de manera flexible y escalable.</li>
+                <li><strong>Mongoose:</strong> ODM para modelar los datos de la aplicación y facilitar la interacción con MongoDB.</li>
+            </ul>
+
+            <a href="https://github.com/THOMASEBASTIAN/MongoSistemaMedico.git" target="_blank" rel="noopener noreferrer" class="project-link-btn">
                 Ver Proyecto en GitHub
             </a>
         </div>

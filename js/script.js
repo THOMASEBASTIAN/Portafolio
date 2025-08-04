@@ -43,13 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
-    // AQUÍ SE ACTIVAN TODAS LAS VENTANAS
+   // AQUÍ SE ACTIVAN TODAS LAS VENTANAS
     setupWindow('sobreMiIcon', 'sobreMiModal');
     setupWindow('videoIcon', 'videoModal');
     setupWindow('skillsIcon', 'skillsModal');
-    setupWindow('experienciaIcon', 'experienciaModal'); // <--- AÑADIDO
-    setupWindow('kariomedia-folder', 'kariomediaModal'); // <--- AÑADIDO
-    setupWindow('f1-folder', 'f1Modal'); // <--- AÑADIDO
+    setupWindow('experienciaIcon', 'experienciaModal');
+    setupWindow('kariomedia-folder', 'kariomediaModal');
+    setupWindow('f1-folder', 'f1Modal');
+    setupWindow('sistema-medico-folder', 'sistemaMedicoModal'); // <-- AÑADE ESTA LÍNEA
     // setupWindow('certificadosIcon', 'certificadosModal'); // Puedes activar esta cuando la crees
 
     // --- Lógica para hacer las ventanas arrastrables ---
