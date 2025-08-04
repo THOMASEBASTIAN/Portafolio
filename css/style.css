@@ -202,7 +202,7 @@ body.night-mode {
 
 /* ESTILOS "SOBRE MÍ" */
 .sobre-mi-body { display: flex; align-items: flex-start; gap: 25px; padding: 20px; }
-.contenido-texto { order: 1; flex: 1; color: #ffffff; }
+.contenido-texto { order: 1; flex: 1; color: #000000; }
 .contenido-texto .window-title { margin-top: 0; }
 .avatar-container { order: 2; width: 180px; position: relative; flex-shrink: 0; margin-top: 10px; }
 .avatar-sobre-mi { width: 100%; image-rendering: pixelated; }

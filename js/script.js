@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- LÓGICA PARA LA TRANSICIÓN DEL AVATAR DE HABBO ---
     const habboAvatar = document.getElementById('habboAvatar');
-    const habboImages = ['./imagenes/habbo.png', './imagenes/habbolado.png', './imagenes/habbolado2.png'];
+    const habboImages = ['./Imagenes/habbo.png', './Imagenes/habbolado.png', './Imagenes/habbolado2.png'];
     let currentImageIndex = 0;
     let avatarInterval;
 
